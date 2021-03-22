@@ -9,8 +9,10 @@
     "prettier-format": "prettier --config .prettierrc '*.{json,eslintrc,prettierrc}' 'src/**/*.{ts,scss}' 'public/**/*.html' --write"
   },
   "lint-staged": {
-    "*": [
-      "npm run lint",
+    "*.{ts}": [
+      "npm run lint"
+    ],
+    "*.{ts,scss,html}": [
       "npm run prettier-format"
     ]
   },
